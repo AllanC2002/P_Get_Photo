@@ -1,13 +1,13 @@
 import requests
 
-BASE_URL = "http://localhost:8081/get-photo"
+BASE_URL = "http://174.129.238.113:8080/get-photo"
 
 # Login first
 login_data = {
-    "User_mail": "ascorread5",
+    "User_mail": "ascorread1",
     "password": "1234"
 }
-login_response = requests.post("http://localhost:8080/login", json=login_data)
+login_response = requests.post("http://52.203.72.116:8080/login", json=login_data)
 if login_response.status_code != 200:
     print("Login error:", login_response.status_code, login_response.text)
     exit()
