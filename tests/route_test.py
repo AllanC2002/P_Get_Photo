@@ -4,7 +4,7 @@ BASE_URL = "http://174.129.238.113:8080/get-photo"
 
 # Login first
 login_data = {
-    "User_mail": "ascorread3",
+    "User_mail": "allan",
     "password": "1234"
 }
 login_response = requests.post("http://52.203.72.116:8080/login", json=login_data)
