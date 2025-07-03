@@ -1,10 +1,10 @@
 import requests
 
-BASE_URL = "http://174.129.238.113:8080/get-photo"
-
+#BASE_URL = "http://174.129.238.113:8080/get-photo"
+BASE_URL = "http://localhost:8080/get-photo"
 # Login first
 login_data = {
-    "User_mail": "allan",
+    "User_mail": "allan3",
     "password": "1234"
 }
 login_response = requests.post("http://52.203.72.116:8080/login", json=login_data)
