@@ -1,10 +1,10 @@
 import requests
 
-#BASE_URL = "http://174.129.238.113:8080/get-photo"
-BASE_URL = "http://localhost:8080/get-photo"
+BASE_URL = "http://174.129.238.113:8080/get-photo"
+#BASE_URL = "http://localhost:8080/get-photo"
 # Login first
 login_data = {
-    "User_mail": "allan3",
+    "User_mail": "allancorrea",
     "password": "1234"
 }
 login_response = requests.post("http://52.203.72.116:8080/login", json=login_data)
@@ -24,7 +24,6 @@ response = requests.get(BASE_URL, headers=headers)
 print("Status:", response.status_code)
 
 if response.status_code == 200:
-    # Guardar la imagen recibida a un archivo local para verificarla
     content_type = response.headers.get('Content-Type', '')
     ext = ''
     if 'jpeg' in content_type:
