@@ -1,13 +1,15 @@
 import requests
 
-BASE_URL = "http://174.129.238.113:8080/get-photo"
+#BASE_URL = "http://174.129.238.113:8080/get-photo" qa
+BASE_URL = "http://54.160.45.99:8080/get-photo"
 #BASE_URL = "http://localhost:8080/get-photo"
 # Login first
 login_data = {
-    "User_mail": "allancorrea",
+    "User_mail": "allanprod3",
     "password": "1234"
 }
-login_response = requests.post("http://52.203.72.116:8080/login", json=login_data)
+#login_response = requests.post("http://52.203.72.116:8080/login", json=login_data) qa
+login_response = requests.post("http://100.25.74.174:8080/login", json=login_data)
 if login_response.status_code != 200:
     print("Login error:", login_response.status_code, login_response.text)
     exit()
